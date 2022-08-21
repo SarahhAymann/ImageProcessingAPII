@@ -1,0 +1,31 @@
+{
+    "root": true,
+    "plugins": ["prettier","@typescript-eslint"],
+    "parser": "@typescript-eslint/parser",
+
+    "extends": ["eslint:recommended", "prettier","plugin:@typescript-eslint/recommended"],
+    "rules": {
+        "prettier/prettier": ["error", { "endOfLine": "auto", "parser": "typescript"
+        }],
+        "no-use-before-define": [
+            "error",
+            { "functions": true, "classes": true }
+        ],
+        "no-var": "error",
+        "prefer-const": "error"
+    },
+    "parserOptions": {
+        "ecmaVersion": 2020,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true,
+
+            "experimentalObjectRestSpread": true
+        }
+
+    },
+    "env": {
+        "node": true,
+        "es6": true
+    }
+}
