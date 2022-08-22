@@ -26,7 +26,7 @@ resize.get(
             });
             return;
         }
-        if (!Width || !Height) {
+        if (!Width || !Height ||Width<0 || Height <0) {
             res.status(400).json({
                 message:
                     'Mandatory field: Dimisnions are missing or incorrect. '
